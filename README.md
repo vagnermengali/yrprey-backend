@@ -56,17 +56,32 @@ After understanding the scenario and the vulnerable route, the process of identi
 
 For more details you can use a service like the [swagger editor](https://editor.swagger.io).
 
+## How to Create the Environment:
 
-## How to create the environment:
-You can created one local servers:
+You can set up a local server with the following steps:
 
-#### Backend
-- Linux Ubuntu with PHP and MySQL
-- Give chmod 777 /var/www/html/
-- Give chmod 777 /var/www/html/log/log.php
-- Create database with name yrprey
-- Download the yrprey database file (yrprey.sql) and run it in the MySQL database
-- In the database yrprey, dive: "SET GLOBAL sql_mode = ''"
+### Backend
+
+1. **Linux Ubuntu with PHP and MySQL:**
+   - Make sure you are using Linux Ubuntu with PHP and MySQL.
+
+2. **Grant File Permissions:**
+   - Execute the following commands to grant necessary permissions:
+     - `chmod 777 /var/www/html/`
+     - `chmod 777 /var/www/html/log/log.php`
+
+3. **Database Creation:**
+   - Create a database named `yrprey`.
+
+4. **Database Import:**
+   - Download the `yrprey.sql` database file.
+   - Import the `yrprey.sql` file into the MySQL database.
+
+5. **SQL Configuration:**
+   - In the `yrprey` database, execute the following SQL command:
+     ```
+     SET GLOBAL sql_mode = '';
+     ```
 
 ## Reporting Vulnerabilities
 
